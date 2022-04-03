@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Question"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:textColor="#B11818"
+        android:text="Вопросы"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_rounded_rectangle"
+        android:layout_marginTop="150dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Results"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:textColor="#B11818"
+        android:text="Рейтинг"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_rounded_rectangle"
+        android:layout_marginTop="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Profile"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:textColor="#B11818"
+        android:text="Профиль"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Results"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_rounded_rectangle"
+        android:layout_marginTop="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
