@@ -1,13 +1,425 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="#657C7C">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:text="ВОПРОСЫ"/>
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_FirstQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Попав в аэропорт Фьюмичино имени Леонардо да Винчи в городе Рим, ты оказываешь на равном расстоянии от всех столичных аэропортов мира."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rg_First"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_FirstQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_FirstQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_FirstQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_FirstTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_FirstFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_SecondQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Белое море одновременно является самым теплым и самым холодным."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_First"
+            app:layout_constraintStart_toStartOf="@id/rg_First"
+            app:layout_constraintTop_toBottomOf="@id/rg_First" />
+
+        <RadioGroup
+            android:id="@+id/rg_Second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_SecondQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_SecondQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_SecondQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_SecondTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_SecondFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_ThreadQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Последний активный вулкан на планете погас в 2010 году."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Second"
+            app:layout_constraintStart_toStartOf="@id/rg_Second"
+            app:layout_constraintTop_toBottomOf="@id/rg_Second" />
+
+        <RadioGroup
+            android:id="@+id/rg_Thread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ThreadQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ThreadQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_ThreadQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_TreadTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_TreadFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_FoursQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="На северном полюсе нет земли. Вся Арктика – это одна большая глыба льда."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Thread"
+            app:layout_constraintStart_toStartOf="@id/rg_Thread"
+            app:layout_constraintTop_toBottomOf="@id/rg_Thread" />
+
+        <RadioGroup
+            android:id="@+id/rg_Fours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_FoursQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_FoursQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_FoursQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_FoursTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_FoursFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_FivesQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Тибет - это самостоятельное государство под управлением Далай-ламы"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Fours"
+            app:layout_constraintStart_toStartOf="@id/rg_Fours"
+            app:layout_constraintTop_toBottomOf="@id/rg_Fours" />
+
+        <RadioGroup
+            android:id="@+id/rg_Fives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_FivesQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_FivesQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_FivesQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_FivesTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_FivesFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tv_SixQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Самым коротким названием населенного пункта является - «Å»"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Fives"
+            app:layout_constraintStart_toStartOf="@id/rg_Fives"
+            app:layout_constraintTop_toBottomOf="@id/rg_Fives" />
+
+        <RadioGroup
+            android:id="@+id/rg_Six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_SixQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_SixQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_SixQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_SixTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_SixFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_SevenQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Остров Мадагаскар, Цейлон и Занзибар принадлежат Франции."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Six"
+            app:layout_constraintStart_toStartOf="@id/rg_Six"
+            app:layout_constraintTop_toBottomOf="@id/rg_Six" />
+
+        <RadioGroup
+            android:id="@+id/rg_Seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_SevenQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_SevenQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_SevenQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_SevenTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_SevenFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_EightQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Город Чунцин в Китае является самым большим городом по занимаемой площади."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Seven"
+            app:layout_constraintStart_toStartOf="@id/rg_Seven"
+            app:layout_constraintTop_toBottomOf="@id/rg_Seven" />
+
+        <RadioGroup
+            android:id="@+id/rg_Eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_EightQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_EightQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_EightQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_EightTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_EightFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tv_NineQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Планета Земля является круглой."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Eight"
+            app:layout_constraintStart_toStartOf="@id/rg_Eight"
+            app:layout_constraintTop_toBottomOf="@id/rg_Eight" />
+
+        <RadioGroup
+            android:id="@+id/rg_Nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_NineQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_NineQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_NineQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_NineTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_NineFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tv_TenQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_rounded_rectangle_for_questions"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Гора Эверест является самой высокой горой в мире."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rg_Nine"
+            app:layout_constraintStart_toStartOf="@id/rg_Nine"
+            app:layout_constraintTop_toBottomOf="@id/rg_Nine" />
+
+        <RadioGroup
+            android:id="@+id/rg_Ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_TenQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tv_TenQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tv_TenQuestion">
+
+            <RadioButton
+                android:id="@+id/rb_TenTrue"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Правда"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_TenFalse"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:text="Неправда" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Enter"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#B11818"
+            android:textSize="20sp"
+            android:text="Проверить"
+            android:background="@drawable/ic_rounded_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/rg_Ten"
+            app:layout_constraintStart_toStartOf="@+id/rg_Ten"
+            app:layout_constraintEnd_toEndOf="@+id/rg_Ten"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -30,6 +30,16 @@
         android:background="@drawable/ic_rounded_rectangle"
         android:layout_marginTop="50dp"/>
 
+    <TextView
+        android:id="@+id/tv_PersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Profile"
         android:layout_width="300dp"

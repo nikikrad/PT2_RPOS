@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import com.example.pt2_rpos.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment() {
@@ -26,14 +27,20 @@ class MenuFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val name = arguments?.getString("NAME")
+        if (name == null){
+            binding.tvPersonName.text = "User"
+        }else binding.tvPersonName.text = name
+        val bundle = Bundle()
+        bundle.putString("PersonName", name)
         binding.btnQuestion.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.questionFragment)
+            findNavController(view).navigate(R.id.questionFragment, bundle)
         }
         binding.btnProfile.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.profileFragment)
+            findNavController(view).navigate(R.id.profileFragment)
         }
         binding.btnResults.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.resultFragment)
+            findNavController(view).navigate(R.id.resultFragment)
         }
     }
 

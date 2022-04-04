@@ -2,28 +2,28 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menuFragment2">
+    app:startDestination="@id/menuFragment">
 
     <fragment
-        android:id="@+id/menuFragment2"
+        android:id="@+id/menuFragment"
         android:name="com.example.pt2_rpos.MenuFragment"
         android:label="MenuFragment" >
         <action
-            android:id="@+id/action_menuFragment2_to_questionFragment2"
+            android:id="@+id/action_menuFragment_to_questionFragment"
             app:destination="@id/questionFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_menuFragment2_to_profileFragment2"
+            android:id="@+id/action_menuFragment_to_profileFragment"
             app:destination="@id/profileFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_menuFragment2_to_resultFragment2"
+            android:id="@+id/action_menuFragment_to_resultFragment"
             app:destination="@id/resultFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
