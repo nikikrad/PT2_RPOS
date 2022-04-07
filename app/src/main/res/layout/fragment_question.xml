@@ -31,7 +31,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tv_FirstQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_FirstQuestion"
-            app:layout_constraintStart_toStartOf="@+id/tv_FirstQuestion">
+            app:layout_constraintStart_toStartOf="@+id/tv_FirstQuestion"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/rb_FirstTrue"
@@ -70,7 +71,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tv_SecondQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_SecondQuestion"
-            app:layout_constraintStart_toStartOf="@+id/tv_SecondQuestion">
+            app:layout_constraintStart_toStartOf="@+id/tv_SecondQuestion"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/rb_SecondTrue"
@@ -107,6 +109,7 @@
             android:id="@+id/rg_Thread"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_ThreadQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_ThreadQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_ThreadQuestion">
@@ -146,6 +149,7 @@
             android:id="@+id/rg_Fours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_FoursQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_FoursQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_FoursQuestion">
@@ -185,6 +189,7 @@
             android:id="@+id/rg_Fives"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_FivesQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_FivesQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_FivesQuestion">
@@ -225,6 +230,7 @@
             android:id="@+id/rg_Six"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_SixQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_SixQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_SixQuestion">
@@ -264,6 +270,7 @@
             android:id="@+id/rg_Seven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_SevenQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_SevenQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_SevenQuestion">
@@ -303,6 +310,7 @@
             android:id="@+id/rg_Eight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_EightQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_EightQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_EightQuestion">
@@ -343,6 +351,7 @@
             android:id="@+id/rg_Nine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_NineQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_NineQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_NineQuestion">
@@ -383,6 +392,7 @@
             android:id="@+id/rg_Ten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_TenQuestion"
             app:layout_constraintEnd_toEndOf="@+id/tv_TenQuestion"
             app:layout_constraintStart_toStartOf="@+id/tv_TenQuestion">

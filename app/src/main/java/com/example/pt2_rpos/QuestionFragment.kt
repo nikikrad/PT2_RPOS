@@ -6,6 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
@@ -35,70 +38,110 @@ class QuestionFragment: Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.rgFirst.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_FirstFalse -> 1
-                else -> {0}
-            })
-        }
-        binding.rgSecond.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_SecondTrue -> 1
-                else -> {0}
-            })
-        }
-        binding.rgThread.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_TreadFalse -> 1
-                else -> {0}
-            })
-        }
-        binding.rgFours.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_FoursTrue -> 1
-                else -> {0}
-            })
-        }
-        binding.rgFives.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_FivesFalse -> 1
-                else -> {0}
-            })
-        }
-        binding.rgSix.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_SixTrue -> 1
-                else -> {0}
-            })
-        }
-        binding.rgSeven.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_SevenFalse -> 1
-                else -> {0}
-            })
-        }
-        binding.rgEight.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_EightTrue -> 1
-                else -> {0}
-            })
-        }
-        binding.rgNine.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_NineFalse -> 1
-                else -> {0}
-            })
-        }
-        binding.rgTen.setOnCheckedChangeListener { group, checkedId ->
-            status.add(when(checkedId){
-                R.id.rb_TenFalse -> 1
-                else -> {0}
-            })
-        }
         binding.btnEnter.setOnClickListener {
-            var temp = 0;
-            status.forEach {
-                if(it == 1) temp ++
+
+            var temp = 0
+
+            val checkedRadioButtonFirst = binding.rgFirst.checkedRadioButtonId
+            when(checkedRadioButtonFirst){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonFirst)
+                    if(selectedRadioButton == binding.rbFirstFalse)  temp ++
+                }
+            }
+            val checkedRadioButtonSecond = binding.rgSecond.checkedRadioButtonId
+            when(checkedRadioButtonSecond){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonSecond)
+                    if(selectedRadioButton == binding.rbSecondTrue)  temp ++
+                }
+            }
+            val checkedRadioButtonThird = binding.rgThread.checkedRadioButtonId
+            when(checkedRadioButtonThird){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonThird)
+                    if(selectedRadioButton == binding.rbTreadFalse)  temp ++
+                }
+            }
+            val checkedRadioButtonFours = binding.rgFours.checkedRadioButtonId
+            when(checkedRadioButtonFours){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonFours)
+                    if(selectedRadioButton == binding.rbFoursTrue)  temp ++
+                }
+            }
+            val checkedRadioButtonFives = binding.rgFives.checkedRadioButtonId
+            when(checkedRadioButtonFives){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonFives)
+                    if(selectedRadioButton == binding.rbFivesFalse)  temp ++
+                }
+            }
+            val checkedRadioButtonSix = binding.rgSix.checkedRadioButtonId
+            when(checkedRadioButtonSix){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonSix)
+                    if(selectedRadioButton == binding.rbSixTrue)  temp ++
+                }
+            }
+            val checkedRadioButtonSeven = binding.rgSeven.checkedRadioButtonId
+            when(checkedRadioButtonSeven){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonSeven)
+                    if(selectedRadioButton == binding.rbSevenFalse)  temp ++
+                }
+            }
+            val checkedRadioButtonEight = binding.rgEight.checkedRadioButtonId
+            when(checkedRadioButtonEight){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonEight)
+                    if(selectedRadioButton == binding.rbEightTrue)  temp ++
+                }
+            }
+            val checkedRadioButtonNine = binding.rgNine.checkedRadioButtonId
+            when(checkedRadioButtonNine){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonNine)
+                    if(selectedRadioButton == binding.rbNineFalse)  temp ++
+                }
+            }
+
+            val checkedRadioButtonTen = binding.rgTen.checkedRadioButtonId
+            when(checkedRadioButtonTen){
+                -1 -> {
+
+                }
+                else -> {
+                    val selectedRadioButton = view.findViewById<RadioButton>(checkedRadioButtonTen)
+                    if(selectedRadioButton == binding.rbTenFalse)  temp ++
+                }
             }
             val name = arguments?.getString("PersonName")
             val person = PersonEntity()
@@ -111,9 +154,8 @@ class QuestionFragment: Fragment() {
                 }
                 person.result = temp
                 personDao?.addPerson(person)
-
-                Log.e("KEK", person.name + person.result)
             }
+            Toast.makeText(activity?.applicationContext, "Ваш результат " + temp.toString() + "/10", Toast.LENGTH_LONG).show()
             Navigation.findNavController(view).navigate(R.id.menuFragment)
 
 

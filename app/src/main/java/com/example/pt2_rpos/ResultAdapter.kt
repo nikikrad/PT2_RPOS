@@ -1,16 +1,18 @@
 package com.example.pt2_rpos
 
-import android.os.Bundle
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pt2_rpos.data.PersonEntity
+import com.example.pt2_rpos.databinding.FragmentResultBinding
 
-class ResultAdapter(  private val coinList: List<PersonEntity>
+class ResultAdapter(
+    private val coinList: List<PersonEntity>,
+    private val applicationContext: Context,
+    private val binding: FragmentResultBinding
 ) : RecyclerView.Adapter<ResultAdapter.MainViewHolder>() {
 
 
@@ -20,7 +22,7 @@ class ResultAdapter(  private val coinList: List<PersonEntity>
     ): MainViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.item_person, parent, false)
-        return MainViewHolder(view)
+        return MainViewHolder(view, applicationContext, binding)
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
@@ -30,16 +32,21 @@ class ResultAdapter(  private val coinList: List<PersonEntity>
     override fun getItemCount(): Int = coinList.size
 
     class MainViewHolder(
-        itemView: View
+        itemView: View,
+        private val applicationContext: Context,
+        private val binding: FragmentResultBinding
     ) : RecyclerView.ViewHolder(itemView) {
 
         private val name: TextView = itemView.findViewById(R.id.tv_Name)
         private val result: TextView = itemView.findViewById((R.id.tv_Result))
-        private val bundle = Bundle()
 
         fun bind(item: PersonEntity) {
             name.text = item.name
-            result.text = item.result.toString()
+            result.text = item.result.toString() + "/10"
+            itemView.setOnClickListener{
+                val resultFragment = ResultFragment()
+                resultFragment.showSnackBar(item.id, applicationContext, binding)
+            }
         }
     }
 }
