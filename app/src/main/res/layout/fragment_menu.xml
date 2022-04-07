@@ -4,19 +4,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#657C7C">
-    
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Question"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:textSize="20sp"
-        android:textColor="#B11818"
-        android:text="Вопросы"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/ic_rounded_rectangle"
-        android:layout_marginTop="150dp"/>
+        android:text="Вопросы"
+        android:textColor="#B11818"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_PersonName" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Results"
@@ -39,7 +39,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
-        android:textSize="50sp"/>
+        android:gravity="center"
+        android:background="@drawable/ic_rounded_rectangle_for_questions"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="40sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Profile"
